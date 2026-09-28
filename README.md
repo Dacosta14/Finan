@@ -1,4 +1,4 @@
-# Finan — Personal Finance Management Platform
+# Finan — Financial Navigation and Analysis
 
 A full stack web application for personal finance control, currently in development. The platform centralizes financial management in one place — from daily expenses to investments and goals — with a clean, modern dashboard connected to a real API.
 
