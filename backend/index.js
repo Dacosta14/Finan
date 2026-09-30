@@ -1,0 +1,45 @@
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const { protegerEscrita } = require("./middlewares/authMiddleware");
+const despesasRoutes = require("./routes/despesasRoutes");
+const usuariosRoutes = require("./routes/usuariosRoutes");
+const dividasRoutes = require("./routes/dividasRoutes");
+const ativosRoutes = require("./routes/ativosRoutes");
+const metasRoutes = require("./routes/metasRoutes");
+const categoriasRoutes = require("./routes/categoriasRoutes");
+const receitasRoutes = require("./routes/receitasRoutes");
+const reservasRoutes = require("./routes/reservasRoutes");
+const contasRoutes = require("./routes/contasRoutes");
+const movimentacoesRoutes = require("./routes/movimentacoesRoutes");
+const parcelamentosRoutes = require("./routes/parcelamentosRoutes");
+const parcelasDividaRoutes = require("./routes/parcelasDividaRoutes");
+const carteirasRoutes = require("./routes/carteirasRoutes");
+const historicoPrecosRoutes = require("./routes/historicoPrecosRoutes");
+const assinaturasRoutes = require("./routes/assinaturasRoutes");
+const iaRoutes = require("./routes/iaRoutes");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(protegerEscrita);
+app.use("/despesas", despesasRoutes);
+app.use("/usuarios", usuariosRoutes);
+app.use("/dividas", dividasRoutes);
+app.use("/ativos", ativosRoutes);
+app.use("/metas", metasRoutes);
+app.use("/categorias", categoriasRoutes);
+app.use("/receitas", receitasRoutes);
+app.use("/reservas", reservasRoutes);
+app.use("/contas", contasRoutes);
+app.use("/movimentacoes", movimentacoesRoutes);
+app.use("/parcelamentos", parcelamentosRoutes);
+app.use("/parcelas-divida", parcelasDividaRoutes);
+app.use("/carteiras", carteirasRoutes);
+app.use("/historico-precos", historicoPrecosRoutes);
+app.use("/assinaturas", assinaturasRoutes);
+app.use("/ia", iaRoutes);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));

@@ -1,0 +1,28 @@
+:root {
+  --bg: #09090b;
+  --card: #18181b;
+  --purple: #8b5cf6;
+  --purple-hover: #a855f7;
+  --text: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --green: #22c55e;
+  --red: #ef4444;
+  --gold: #facc15;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
